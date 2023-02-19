@@ -1,0 +1,91 @@
+<html lang= "es">
+    <head>
+        <meta charset="utf-8" />
+        <title>Formulario</title>
+        <link rel="stylesheet" href="style.css">
+        
+        
+        
+
+    </head>
+    <body class="body">
+        
+        <table class="cuadro">
+
+            
+            <tr><td><form class="formulario" id="formulario" onsubmit="return validateForm()">
+        
+                <h1 class="titulo">Create Account</h1>
+
+                <!-- Grupo Nombre -->
+                <div class="formulario_grupo" id="grupo_nombre">
+                    <label for="nombre" class="formulario_label">Nombre</label>
+                    <div class="formulario_grupo-input">
+                        <input type="text" class="formulario_input" name="nombre" id="nombre">
+                        <svg class="formulario_validar-estado error_icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C19.994 15.52 15.52 19.994 10 20ZM9 13V15H11V13H9ZM9 5V11H11V5H9Z" fill="#DB5A5A"/>
+                            </svg>
+                    </div>
+                    <p class="formulario_input-error" id="fraseErrorNombre" hidden=true>Rellene este campo</p>
+                    <p class="formulario_input-error" id="nombreIncorrecto" hidden=true>El nombre sólo puede contener letras</p>
+                </div>
+
+                </br>
+
+                <!-- Grupo Email -->
+                <div class="formulario_grupo" id="grupo_email">
+                    <label for="nombre" class="formulario_label">Email</label>
+                    <div class="formulario_grupo-input">
+                        <input type="email" class="formulario_input" name="email" id="email">
+                        <svg class="formulario_validar-estado error_icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C19.994 15.52 15.52 19.994 10 20ZM9 13V15H11V13H9ZM9 5V11H11V5H9Z" fill="#DB5A5A"/>
+                            </svg>
+                    </div>
+                    <p class="formulario_input-error" id="fraseErrorEmail" hidden=true>Rellene este campo</p>
+                    <p class="formulario_input-error" id="emailInvalido" hidden=true>Email Inválido</p>
+                </div>
+                        
+                </br>
+
+                <!-- Grupo Clave -->
+                <div class="formulario_grupo" id="grupo_clave">
+                    <label for="clave" class="formulario_label">Clave</label>
+                    <div class="formulario_grupo-input">
+                        <input type="password" class="formulario_input" maxlength="8" name="clave" id="clave">
+                        <svg class="formulario_validar-estado error_icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C19.994 15.52 15.52 19.994 10 20ZM9 13V15H11V13H9ZM9 5V11H11V5H9Z" fill="#DB5A5A"/>
+                            </svg>
+                    </div>
+                    <p class="formulario_input-error" id="fraseErrorClave" hidden=true>Rellene este campo</p>
+                </div>
+
+                </br>
+              
+                <!-- Grupo Confirmar clave -->
+                <div class="formulario_grupo" id="grupo_conf-clave">
+                    <label for="conf-clave" class="formulario_label">Confirme su clave</label>
+                    <div class="formulario_grupo-input">
+                        <input type="password" class="formulario_input" maxlength="8" name="conf-clave" id="conf-clave">
+                        <svg class="formulario_validar-estado error_icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C19.994 15.52 15.52 19.994 10 20ZM9 13V15H11V13H9ZM9 5V11H11V5H9Z" fill="#DB5A5A"/>
+                            </svg>
+                    </div>
+                    <p class="formulario_input-error" id="fraseErrorConfClave" hidden=true>Rellene este campo</p>
+                    <p class="formulario_input-error" id="clavesDiferentes" hidden=true>Las claves no coinciden</p>
+                </div>
+               
+                <br />
+            
+                <div class="formulario_grupo formulario_grupo-boton">
+                    <button class="formulario_boton" type="submit">ENVIAR</button>
+                </div>
+
+    
+    
+            </form></td></tr>
+            
+            <!-- <link rel="javascript" href="index.js"> -->
+        </table>
+        <script src="index.js"></script>
+    </body>
+</html>
