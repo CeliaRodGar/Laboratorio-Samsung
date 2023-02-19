@@ -1,5 +1,3 @@
-//const formulario = document.getElementById('formulario');
-//const inputs = document.querySelectorAll('#formulario input');
 
 function validateForm(){
     let nombre = document.getElementById('nombre').value
@@ -16,13 +14,21 @@ function validateForm(){
         let textoError = document.getElementById('fraseErrorNombre') 
         textoError.hidden = false
         validacion = false
-        //document.getElementById('nombre').classList.add('formulario_grupo-incorrecto')
+        let iconoBienNombre = document.getElementById('estado-bien')
+        iconoBienNombre.hidden = false
+        let iconoMalNombre = document.getElementById('estado-mal')
+        iconoMalNombre.hidden = true
+
     }else{
         let nombreClase = document.getElementById('nombre')
         nombreClase.className = 'formulario_inputOk'
         let textoError = document.getElementById('fraseErrorNombre') 
         textoError.hidden = true
         validacion = true
+        let iconoBienNombre = document.getElementById('estado-bien')
+        iconoBienNombre.hidden = true
+        let iconoMalNombre = document.getElementById('estado-mal')
+        iconoMalNombre.hidden = false
     }
 
     //if else de la trada de nombre sin caacteres numericos
@@ -106,47 +112,3 @@ function validateForm(){
 
     return validacion
 }
-
-/*
-const expresiones = {
-	nombre: /^[a-zA-ZÀ-ÿ]$/,
-	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	clave: /^.{1,8}$/,
-}
-
-const validarFormulario = (e) => {
-    switch (e.target.name){
-        case "nombre":
-            if(expresiones.nombre.test(e.target.value)){
-                
-
-            } else {
-                document.getElementById('grupo_nombre').classList.add('formulario_grupo-incorrecto');
-            }
-        
-        break;
-        case "email":
-        
-        break;
-        case "clave":
-        
-        break;
-        case "conf-clave":
-        
-        break;
-        
-
-    }
-
-};
-
-inputs.forEach((input) => {
-    input.addEventListener('keyup', validarFormulario);
-    input.addEventListener('blur', validarFormulario);
-        
-    });
-
-formulario.addEventListener('submit', (e) => {
-    e.preventDefault();
-});
-*/

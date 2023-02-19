@@ -34,7 +34,16 @@
        
 }
 
-.formulario_validar-estado {
+.formulario_validar-estado-mal {
+    position: absolute;
+    top:50%;
+    right:65px;
+    transform: translateY(-50%);
+    z-index:100;
+    opacity:1;
+}
+
+.formulario_validar-estado-bien {
     position: absolute;
     top:50%;
     right:65px;
@@ -101,7 +110,7 @@
 
 }
 
-/* Si los campos son correctos*/
+/* Si los campos son correctos
 
 .formulario_grupo-correcto .formulario_validar-estado {
     color:#4ECA64;
@@ -111,7 +120,7 @@
     border-color:#4ECA64;
 }
 
-/* Si los campos son incorrectos*/
+ Si los campos son incorrectos
 
 .formulario_grupo-incorrecto .formulario_input{
     border-color:#DB5A5A;
@@ -119,4 +128,4 @@
 
 .formulario_grupo-incorrecto .formulario_validar-estado{
     opacity:1;
-}
+}/*
